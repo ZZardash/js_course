@@ -138,8 +138,6 @@ console.log(text6);
 let text7 = text.toLowerCase();
 console.log(text7);
 
-//--------------------------------------------
-
 //Concat
 let _text = "   Hello";
 let _text2 = "World!    ";
@@ -192,11 +190,73 @@ console.log(last_indexof);
 search = str.search("lo Wo");
 console.log(search);
 
+//Match - Match All
+console.log(str.match("llo"));
+console.log(str.matchAll('o'));
 
+//Includes
+console.log(str.includes("llo")); //True
+console.log(str.includes("llo", 3)); //Start at 3 (False)
 
+//Starts With - Ends With
+console.log(str.startsWith("H"));
+console.log(str.endsWith("!"));
 
+//Interpolation
+var txt = "Hello";
+var txt1 = "World!";
 
+var cTxt = `${txt} ${txt1} My name is JS!`; //With BackTicks!!
+console.log(cTxt);
 
+var price = 30;
+var cTxt2 = `${txt} your monthly expense is ${price * 30}`;
+
+console.log(cTxt2);
+
+//HTML Templates
+let header = "Templates Literals";
+let tags = ["template literals", "javascript", "es6"];
+
+let html = `<h2>${header}</h2><ul>`;
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+html += `</ul>`;
+
+//Numeric Strings
+
+let _x = "100";
+let _y = "10"; 
+
+let _z = _x + _y;
+console.log(_z); //Concatenation
+
+let _z1= _x / _y;
+console.log(_z1); //Numeric Operation 
+
+//NaN => (Not a Number) 
+//Actually the type NaN is number !
+var a = 100 / "Mahmut";
+console.log(isNaN(a));
+
+//Infinity(Over the limit)
+var b = 5;
+while (b != Infinity){ //till the number is over line
+    b*=b;
+    console.log(b);
+} 
+
+console.log(2/0); //Infinity
+console.log(-2/0); //-Infinity
+
+//Hexadecimal(16bit)
+
+console.log(0xFF + 1);
+
+number = 5;
+console.log(Number.isInteger(number))
+console.log(Number.isSafeInteger(number))
 
 
 
