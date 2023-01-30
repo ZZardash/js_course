@@ -404,4 +404,47 @@ let numberString = +string; //Cast with unary (+) operator
 
 console.log(typeof(numberString));
 
+//-----------------REGULAR EXPRESSIONS-----------------
+/*Syntax
+/pattern/modifiers;*/
+
+//search()
+let ads = "Hello to JS";
+console.log(ads.search("JS"));
+
+console.log(ads.search(/js/i));//Reg Ex with i(case insensitive)
+
+//replace()
+console.log(ads.replace("JS", "CSS"));
+console.log(ads.replace(/js/i, "CSS"));//Reg Ex
+
+//--------------------TRY / CATCH --------------------
+
+try {
+    adlert("No error!"); //Error caught!
+    alert("No error!"); //No error keep trying.
+} catch (error) {
+    alert("There is an error!");
+}
+
+throw "This is too big!"; //Throw custom eror.
+
+
+function catchError(){
+    const message = document.getElementById("id2");
+    message.innerHTML = "";
+    value = document.getElementById("id1").value;
+    try{
+        if (value.trim() == "") throw "Empty!";
+        if (isNaN(value)) throw "Not a number";
+        value = Number(value);
+        if (value < 5) throw "Too low.";
+        if (value > 10) throw "Too high.";
+    }
+    catch(error){
+        alert("Input is " + error);
+    }
+}
+
+
 

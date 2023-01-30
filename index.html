@@ -1,14 +1,14 @@
 <html lang="en">
 
 <head>
-    <p>this is a paragraph</p>
     <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="demo3">
+    <p id="demo2"></p>
     <p id="demo">This is a demo paragraph.</p>
     <button onclick = 'document.getElementById("myImage").src = "./img/pic_bulbon.gif"'>
     Turn on the light       
@@ -34,5 +34,10 @@
     
     <p id="demo2">This is a paragraph</p>
     <button id="change" onclick="changePhrase()">Change Paragraph</button>
+
+    <input id="id1" type="text">
+    <button type="button" onclick="catchError()">Test Input</button>
+    <p id="id2"></p>
+    
 </body>
 </html>
