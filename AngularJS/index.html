@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<!--ng-app => Angular Application 
+**Everything under this tag controlled by angular.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app/lib/angular.min.js"></script>
+</head>
+<body ng-init="fruits=['apple','orange','melon','avocado']">
+    
+    <!-- MVC -> Model/View/Controller
+    MODEL => Basically model is DATA.(JSON, DataBase etc.)
+    VIEW => Displayed content which is UI.(Active users etc.)
+    CONTROLLER => Controls the functionality of view, UI.
+    -->
+    
+    <main ng-view class="main">
+        <input type="text" ng-model="favMeat" placeholder="Enter your favourite meat:"> 
+        <!--We use ng-model for store the data-->
+        <p>Your fav meat is: {{favMeat}}</p> 
+        <ul>
+            <li ng-repeat="apple in fruits">{{apple}}</li>
+        </ul>
+        <!-- When type "/contact" dynamically inject the contact.html view-->
+        <!-- When type "/about" dynamically inject the about.html view-->
+    </main>
+</body>
+</html>
